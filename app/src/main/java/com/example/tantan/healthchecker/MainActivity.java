@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.example.omistaja.bmicalculator.R;
+import com.example.tantan.healthchecker.R;
 
 import java.util.Scanner;
 
