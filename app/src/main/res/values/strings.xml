@@ -10,4 +10,5 @@
     <string name="imagebutton2">Female</string>
     <string name="textview4">cm</string>
     <string name="textview5">kg</string>
+    <string name="textview6">result</string>
 </resources>
