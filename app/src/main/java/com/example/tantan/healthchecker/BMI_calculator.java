@@ -19,11 +19,13 @@ public class BMI_calculator extends MainActivity {
     }
 
     public String getResult(){
-        if (result >= 25.0){
+        if (result >= 25 && result < 30){
             return "Your Body Mass Index is " + String.format("%.1f",this.result) + "." + " This is considered overweight.";
         } else if (result < 18.5){
             return "Your Body Mass Index is " + String.format("%.1f",this.result) + "." + " This is considered underweight.";
-        } else {
+        } else if (result >= 30){
+           return "Your Body Mass Index is " + String.format("%.1f",this.result) + "." + " This is considered obese.";
+        } else{
             return "Your Body Mass Index is " + String.format("%.1f",this.result) + "." + " This is considered normal.";
         }
     }
