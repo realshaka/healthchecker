@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.omistaja.bmicalculator.R;
+import com.example.tantan.healthchecker.R;
 import com.example.tantan.healthchecker.MainActivity;
 
 public class DisplayResult extends AppCompatActivity {

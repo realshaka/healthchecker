@@ -36,12 +36,7 @@ public class MainActivity extends AppCompatActivity {
         editText2 = (EditText) findViewById(R.id.editText2);
         seekBar1 = (SeekBar) findViewById(R.id.seekBarbmi);
         seekBar2 = (SeekBar) findViewById(R.id.seekBarbmi2);
-        // Set the value in the edit text as the parameter for bmi object of class BMI_calculator
-        String strHeight = editText.getText().toString();
-        String strWeight = editText2.getText().toString();
-        Double doubleweight = Double.parseDouble(strWeight);
-        Double doubleheight = Double.parseDouble(strHeight);
-        bmi_calculator = new BMI_calculator(doubleheight, doubleweight);
+
 
         seekBar1.setMax(200);
         seekBar2.setMax(150);
@@ -132,6 +127,13 @@ public class MainActivity extends AppCompatActivity {
     public void buttoncalculate(View view) {
         Intent intent = new Intent(this, DisplayResult.class);
 
+        // Set the value in the edit text as the parameter for bmi object of class BMI_calculator
+        String strHeight = editText.getText().toString();
+        String strWeight = editText2.getText().toString();
+        Double doubleweight = Double.parseDouble(strWeight);
+        Double doubleheight = Double.parseDouble(strHeight);
+        
+        bmi_calculator = new BMI_calculator(doubleheight, doubleweight);
         bmi_calculator.calculate();
         String message = bmi_calculator.getResult();
         intent.putExtra(EXTRA_MESSAGE, message);

@@ -212,6 +212,7 @@
         android:background="@drawable/button_custom"
         android:backgroundTint="@color/Whiteblush"
         android:lineSpacingExtra="8sp"
+        android:onClick="buttoncalculate"
         android:text="@string/buttoncalculate"
         android:textAlignment="center"
         android:textAllCaps="false"
