@@ -183,7 +183,6 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
             }       }
     }
 
-
     //unused code but nesecessary for the keylistener to work
     @Override
     public int getInputType() {
