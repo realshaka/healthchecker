@@ -3,8 +3,16 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574b</color>
     <color name="colorAccent">#d81b60</color>
-    <color name="White">#eeefea </color>
+    <color name="bone">#e3dac9 </color>
     <color name="Yellow">#ffff00</color>
     <color name="Redplumcolored">#db5a6b</color>
-    <color name="Whiteblush">#f7f1e2</color>
+    <color name="redbutton">#f44336</color>
+    <color name="red">#f44336</color>
+    <color name="green">#4caf50</color>
+    <color name="normal">#60cdcb</color>
+    <color name="underweight">#f5d342</color>
+    <color name="overweight">#1388aa</color>
+    <color name="obese">#e64d62</color>
+    <color name="white">#f0f7ff</color>
+
 </resources>

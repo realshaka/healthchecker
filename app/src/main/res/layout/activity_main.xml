@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/White"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <android.support.constraint.Guideline
@@ -12,71 +12,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="9dp"
         android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarbmi"
         app:layout_constraintGuide_begin="301dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        style="@android:style/Widget.Holo.Light.ImageButton"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
-        android:layout_margin="2dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/imagebutton"
-        android:scaleType="fitCenter"
-        android:src="@drawable/man"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26"
-        tools:src="@drawable/man" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        style="@android:style/Widget.Holo.Light.ImageButton"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
-        android:layout_margin="2dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/imagebutton2"
-        android:scaleType="fitCenter"
-        android:src="@drawable/girl"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26"
-        tools:src="@drawable/girl" />
 
     <SeekBar
         android:id="@+id/seekBarbmi"
         style="@style/Base.Animation.AppCompat.Tooltip"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="124dp"
         android:padding="15dp"
         android:progressBackgroundTint="@color/Redplumcolored"
         android:progressTint="@color/Yellow"
         android:thumb="@drawable/cursor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
         app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
 
     <SeekBar
         android:id="@+id/seekBarbmi2"
@@ -93,7 +55,7 @@
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/textView"
@@ -135,25 +97,27 @@
         app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.100000024" />
+        app:layout_constraintVertical_bias="0.285" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="90dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="37dp"
         android:layout_marginBottom="8dp"
-        android:lineSpacingExtra="12sp"
+        android:lineSpacingExtra="8sp"
+        android:padding="2dp"
         android:text="@string/textview3"
-        android:textAllCaps="false"
+        android:textAllCaps="true"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:fontFamily="sans-serif"
+        android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.03" />
@@ -174,9 +138,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toEndOf="@+id/seekBarbmi"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.51" />
+        app:layout_constraintVertical_bias="0.52" />
 
     <EditText
         android:id="@+id/editText2"
@@ -198,33 +163,7 @@
         app:layout_constraintHorizontal_bias="0.966"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="25dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="25dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.92" />
 
     <Button
         android:id="@+id/button"
@@ -236,7 +175,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_custom"
-        android:backgroundTint="@color/Whiteblush"
+        android:backgroundTint="@color/redbutton"
         android:lineSpacingExtra="8sp"
         android:onClick="buttoncalculate"
         android:text="@string/buttoncalculate"
@@ -250,6 +189,63 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.945" />
+        app:layout_constraintVertical_bias="0.85" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/textview4"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/textview5"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:showText="true"
+        android:textOff="@string/Metric"
+        android:textOn="@string/Imperial"
+        android:textSize="30sp"
+        android:thumb="@drawable/switch1"
+        android:track="@drawable/switch_track"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.631" />
 
 </android.support.constraint.ConstraintLayout>

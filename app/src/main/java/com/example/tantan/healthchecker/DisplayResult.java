@@ -1,6 +1,8 @@
 package com.example.tantan.healthchecker;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -17,9 +19,24 @@ public class DisplayResult extends AppCompatActivity {
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        String color = intent.getStringExtra(MainActivity.EXTRA_MESSAGE2);
+        Double colortext = Double.valueOf(color);
 
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textView6);
-        textView.setText(message);
+        //textView.setTextColor(Color.parseColor("#1388aa"));
+        if (colortext >= 25 && colortext < 30){
+            textView.setTextColor(Color.parseColor("#1388aa"));
+            textView.setText(message);
+        }else if(colortext < 18.5){
+            textView.setTextColor(Color.parseColor("#f5d342"));
+            textView.setText(message);
+        }else if (colortext >= 30){
+            textView.setTextColor(Color.parseColor("#e64d62"));
+            textView.setText(message);
+        }else{
+            textView.setTextColor(Color.parseColor("#60cdcb"));
+            textView.setText(message);
+        }
     }
 }
