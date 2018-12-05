@@ -5,10 +5,13 @@
     <string name="buttoncalculate">CALCULATE YOUR BMI</string>
     <string name="editText">0</string>
     <string name="editText2">0</string>
-    <string name="textview3">BMI</string>
+    <string name="textview3">Body Mass Index</string>
     <string name="imagebutton">Male</string>
     <string name="imagebutton2">Female</string>
     <string name="textview4">cm</string>
     <string name="textview5">kg</string>
     <string name="textview6">result</string>
+    <string name="Metric">Metric</string>
+    <string name="Imperial">Imperial</string>
+    <string name="imageview">Imageview</string>
 </resources>
