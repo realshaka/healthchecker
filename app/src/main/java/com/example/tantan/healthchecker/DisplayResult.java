@@ -16,15 +16,14 @@ public class DisplayResult extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_result);
-        // Get the Intent that started this activity and extract the string
+        // Get the Intent that started this activity and eget the string value of it
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         String color = intent.getStringExtra(MainActivity.EXTRA_MESSAGE2);
         Double colortext = Double.valueOf(color);
 
-        // Capture the layout's TextView and set the string as its text
+        // Changes the color of the text depending on the BMI result
         TextView textView = findViewById(R.id.textView6);
-        //textView.setTextColor(Color.parseColor("#1388aa"));
         if (colortext >= 25 && colortext < 30){
             textView.setTextColor(Color.parseColor("#1388aa"));
             textView.setText(message);
