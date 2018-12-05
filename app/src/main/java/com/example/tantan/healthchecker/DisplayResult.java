@@ -27,13 +27,20 @@ public class DisplayResult extends AppCompatActivity {
         if (colortext >= 25 && colortext < 30){
             textView.setTextColor(Color.parseColor("#1388aa"));
             textView.setText(message);
-        }else if(colortext < 18.5){
+        }else if(colortext < 18.5 && colortext > 7.5){
             textView.setTextColor(Color.parseColor("#f5d342"));
             textView.setText(message);
-        }else if (colortext >= 30){
+        }else if (colortext >= 30 && colortext < 88.8){
             textView.setTextColor(Color.parseColor("#e64d62"));
             textView.setText(message);
-        }else{
+        }else if (colortext > 88.8){
+            textView.setTextColor(Color.parseColor("#60cdcb"));
+            String MESSAGE = "Your Body Mass Index is too large. Please pick a proper height or weight";
+            textView.setText(MESSAGE);
+        }  else if (colortext < 7.5){
+            String MESSAGE = "Your Body Mass Index is too large. Please pick a proper height or weight";
+            textView.setText(MESSAGE);
+        } else {
             textView.setTextColor(Color.parseColor("#60cdcb"));
             textView.setText(message);
         }
