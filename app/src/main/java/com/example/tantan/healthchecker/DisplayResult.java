@@ -21,9 +21,22 @@ public class DisplayResult extends AppCompatActivity {
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         String color = intent.getStringExtra(MainActivity.EXTRA_MESSAGE2);
         Double colortext = Double.valueOf(color);
+        String heightInfo = intent.getStringExtra(MainActivity.EXTRA_MESSAGE3);
+        String weightInfo = intent.getStringExtra(MainActivity.EXTRA_MESSAGE4);
+        String SwitchState = intent.getStringExtra(MainActivity.EXTRA_MESSAGE5);
 
         // Changes the color of the text depending on the BMI result
         TextView textView = findViewById(R.id.textView6);
+        TextView textViewheight = findViewById(R.id.textView10);
+        TextView textViewweight = findViewById(R.id.textView11);
+        if (SwitchState.equals("on")) {
+            textViewheight.setText(heightInfo + " " + "ft");
+            textViewweight.setText(weightInfo + " " + "Lbs");
+        } else if (SwitchState.equals("off")) {
+            textViewheight.setText(heightInfo + " " + "cm");
+            textViewweight.setText(weightInfo + " " + "kg");
+        }
+
         if (colortext >= 25 && colortext < 30){
             textView.setTextColor(Color.parseColor("#1388aa"));
             textView.setText(message);
@@ -35,10 +48,10 @@ public class DisplayResult extends AppCompatActivity {
             textView.setText(message);
         }else if (colortext > 88.8){
             textView.setTextColor(Color.parseColor("#60cdcb"));
-            String MESSAGE = "Your Body Mass Index is too large. Please pick a proper height or weight";
+            String MESSAGE = "Your Body Mass Index is too large. Please pick a proper height or weight.";
             textView.setText(MESSAGE);
         }  else if (colortext < 7.5){
-            String MESSAGE = "Your Body Mass Index is too small. Please pick a proper height or weight";
+            String MESSAGE = "Your Body Mass Index is too small. Please pick a proper height or weight.";
             textView.setText(MESSAGE);
         } else {
             textView.setTextColor(Color.parseColor("#60cdcb"));

@@ -33,6 +33,11 @@ import java.util.Scanner;
 public class MainActivity extends AppCompatActivity implements KeyListener {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     public static final String EXTRA_MESSAGE2 = "com.example.myfirstapp.MESSAGE2";
+    public static final String EXTRA_MESSAGE3 = "com.example.myfirstapp.MESSAGE3";
+    public static final String EXTRA_MESSAGE4 = "com.example.myfirstapp.MESSAGE4";
+    public static final String EXTRA_MESSAGE5 = "com.example.myfirstapp.MESSAGE5";
+
+
 
     private EditText editTextHeight;
     private EditText editTextWeight;
@@ -71,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 int keycod = event.getKeyCode();
                 if (keycod == KeyEvent.KEYCODE_ENTER || keycod == KeyEvent.ACTION_UP){
-                    int numforheight = Integer.parseInt(editTextHeight.getText().toString());
+                    Integer numforheight = Integer.parseInt(editTextHeight.getText().toString());
                     seekBarHeight.setProgress(numforheight);
                 }
                 return false;
@@ -199,8 +204,14 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
                 bmi_calculator_imperial.calculate();
                 String color = String.valueOf(bmi_calculator_imperial.getCalculations());
                 String message = bmi_calculator_imperial.getResult();
+                String heightInfo = String.valueOf(doubleHeight);
+                String weightInfo = String.valueOf(doubleWeight);
+                String SwitchState = "on";
                 intent.putExtra(EXTRA_MESSAGE2, color);
                 intent.putExtra(EXTRA_MESSAGE, message);
+                intent.putExtra(EXTRA_MESSAGE3, heightInfo);
+                intent.putExtra(EXTRA_MESSAGE4, weightInfo);
+                intent.putExtra(EXTRA_MESSAGE5, SwitchState);
                 startActivity(intent);
             } else if (!strHeight.equals("0") && !strWeight.equals("0")) {
                 //calculation using the metric system values
@@ -208,8 +219,14 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
                 bmi_calculator.calculate();
                 String color = String.valueOf(bmi_calculator.getCalculations());
                 String message = bmi_calculator.getResult();
+                String heightInfo = String.valueOf(doubleHeight);
+                String weightInfo = String.valueOf(doubleWeight);
+                String SwitchState = "off";
                 intent.putExtra(EXTRA_MESSAGE, message);
                 intent.putExtra(EXTRA_MESSAGE2, color);
+                intent.putExtra(EXTRA_MESSAGE3, heightInfo);
+                intent.putExtra(EXTRA_MESSAGE4, weightInfo);
+                intent.putExtra(EXTRA_MESSAGE5, SwitchState);
                 startActivity(intent);
             } else if (strHeight.equals("0") || strWeight.equals("0")) {
                 //if the user puts a value of zero this message will be displayed
