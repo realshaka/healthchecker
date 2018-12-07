@@ -38,7 +38,7 @@ public class DisplayResult extends AppCompatActivity {
             String MESSAGE = "Your Body Mass Index is too large. Please pick a proper height or weight";
             textView.setText(MESSAGE);
         }  else if (colortext < 7.5){
-            String MESSAGE = "Your Body Mass Index is too large. Please pick a proper height or weight";
+            String MESSAGE = "Your Body Mass Index is too small. Please pick a proper height or weight";
             textView.setText(MESSAGE);
         } else {
             textView.setTextColor(Color.parseColor("#60cdcb"));
