@@ -2,13 +2,17 @@ package com.example.tantan.healthchecker;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.method.KeyListener;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
@@ -143,7 +147,38 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
 
             }
         });
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(0);
+        menuItem.setChecked(true);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.navigation_calculator:
+                        Intent intent1 = new Intent(MainActivity.this, MainActivity.class);
+                        startActivity(intent1);
+                        break;
+
+                    case R.id.navigation_records:
+                        Intent intent2 = new Intent(MainActivity.this, RecordsActivity.class);
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.navigation_graph:
+                        Intent intent3 = new Intent(MainActivity.this, GraphActivity.class);
+                        startActivity(intent3);
+                        break;
+                }
+                return false;
+            }
+        });
+
     }
+
 
     // (Button) Calculates result and displays it in a new activity
     public void buttoncalculate(View view) {
