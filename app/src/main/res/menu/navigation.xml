@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_calculator"
+        android:icon="@drawable/ic_fitness_center_black_24dp"
+        android:title="@string/title_calculator" />
+
+    <item
+        android:id="@+id/navigation_records"
+        android:icon="@drawable/ic_list_black_24dp"
+        android:title="@string/title_records" />
+
+    <item
+        android:id="@+id/navigation_graph"
+        android:icon="@drawable/ic_show_chart_black_24dp"
+        android:title="@string/title_graph" />
+
+</menu>

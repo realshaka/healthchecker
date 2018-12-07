@@ -100,11 +100,10 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="33dp"
+        android:layout_width="27dp"
         android:layout_height="40dp"
         android:ems="10"
         android:hint="@string/editText"
-        android:importantForAutofill="no"
         android:inputType="number"
         android:text="@string/editText"
         android:textColor="@android:color/background_dark"
@@ -114,11 +113,12 @@
         app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/seekBarbmi"
-        app:layout_constraintTop_toTopOf="@+id/seekBarbmi" />
+        app:layout_constraintTop_toTopOf="@+id/seekBarbmi"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="33dp"
+        android:layout_width="20dp"
         android:layout_height="40dp"
         android:ems="10"
         android:hint="@string/editText2"
@@ -128,12 +128,11 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/seekBarbmi2"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/seekBarbmi2"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toTopOf="@+id/seekBarbmi2" />
+        app:layout_constraintTop_toTopOf="@+id/seekBarbmi2"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/button"
