@@ -2,28 +2,36 @@ package com.example.tantan.healthchecker;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
-import com.example.tantan.healthchecker.R;
-import com.example.tantan.healthchecker.MainActivity;
+import com.example.tantan.healthchecker.repository.RecordRepository;
+import com.example.tantan.healthchecker.ulti.AppUtils;
+
+import java.util.Date;
 
 public class DisplayResult extends AppCompatActivity {
-
+    private RecordRepository recordRepository;
+    private Double colortext;
+    private String heightInfo;
+    private String weightInfo;
+    private String SwitchState;
+    Date savedAt = AppUtils.getCurrentDateTime();
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_result);
         // Get the Intent that started this activity and eget the string value of it
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         String color = intent.getStringExtra(MainActivity.EXTRA_MESSAGE2);
-        Double colortext = Double.valueOf(color);
-        String heightInfo = intent.getStringExtra(MainActivity.EXTRA_MESSAGE3);
-        String weightInfo = intent.getStringExtra(MainActivity.EXTRA_MESSAGE4);
-        String SwitchState = intent.getStringExtra(MainActivity.EXTRA_MESSAGE5);
+        colortext = Double.valueOf(color);
+        heightInfo = intent.getStringExtra(MainActivity.EXTRA_MESSAGE3);
+        weightInfo = intent.getStringExtra(MainActivity.EXTRA_MESSAGE4);
+        SwitchState = intent.getStringExtra(MainActivity.EXTRA_MESSAGE5);
 
         // Changes the color of the text depending on the BMI result
         TextView textView = findViewById(R.id.textView6);
@@ -57,5 +65,8 @@ public class DisplayResult extends AppCompatActivity {
             textView.setTextColor(Color.parseColor("#60cdcb"));
             textView.setText(message);
         }
+    }
+    public void saveRecord(View view) {
+        recordRepository.insertRecord(heightInfo, weightInfo, colortext);
     }
 }
