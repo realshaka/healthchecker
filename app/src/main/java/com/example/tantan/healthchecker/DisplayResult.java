@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import java.util.Date;
 
+/**
+ * Activity displays the BMI result and writes a message to user base on the result
+ */
 public class DisplayResult extends AppCompatActivity {
 
     private String message ;
@@ -72,12 +75,19 @@ public class DisplayResult extends AppCompatActivity {
         updateRecord();
     }
 
+    /**
+     * Save the result to data list
+     * @param view
+     */
     public void saveRecord(View view) {
         GlobalModel.getInstance().addRecord(this.record);
         Log.d("check123456", String.valueOf(record));
         finish();
     }
 
+    /**
+     * Update record with input variables
+     */
     public void updateRecord(){
         record.setBMI(colorNumber);
         record.setColor(color);

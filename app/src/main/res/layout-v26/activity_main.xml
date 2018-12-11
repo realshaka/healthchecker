@@ -100,10 +100,11 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="27dp"
+        android:layout_width="45dp"
         android:layout_height="40dp"
         android:ems="10"
         android:hint="@string/editText"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:text="@string/editText"
         android:textColor="@android:color/background_dark"
@@ -113,15 +114,15 @@
         app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/seekBarbmi"
-        app:layout_constraintTop_toTopOf="@+id/seekBarbmi"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="@+id/seekBarbmi" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="20dp"
+        android:layout_width="45dp"
         android:layout_height="40dp"
         android:ems="10"
         android:hint="@string/editText2"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:text="@string/editText2"
         android:textColor="@android:color/background_dark"
@@ -132,7 +133,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/seekBarbmi2"
         app:layout_constraintTop_toTopOf="@+id/seekBarbmi2"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button"
@@ -171,8 +172,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
         android:text="@string/textview5"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"

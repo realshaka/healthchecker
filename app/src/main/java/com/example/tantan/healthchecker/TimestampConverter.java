@@ -8,7 +8,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-
+/**
+ * Helper to convert Date and return exact time by timezone
+ */
 public class TimestampConverter {
 
     private static DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

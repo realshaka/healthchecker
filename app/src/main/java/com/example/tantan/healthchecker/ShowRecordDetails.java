@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import java.util.Date;
 
+/**
+ * This activity show details of a record
+ */
 public class ShowRecordDetails extends AppCompatActivity {
 
     @Override

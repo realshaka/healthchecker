@@ -1,34 +1,23 @@
 package com.example.tantan.healthchecker;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Editable;
-import android.text.TextWatcher;
 import android.text.method.KeyListener;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.SeekBar;
-import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.tantan.healthchecker.R;
-
-import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity implements KeyListener {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
@@ -185,7 +174,10 @@ public class MainActivity extends AppCompatActivity implements KeyListener {
     }
 
 
-    // (Button) Calculates result and displays it in a new activity
+    /**
+     * (Button) Calculates result and displays it in a new activity
+      */
+
     public void buttoncalculate(View view) {
         Intent intent = new Intent(this, DisplayResult.class);
 

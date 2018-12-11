@@ -13,6 +13,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ * This class contain a listview to display records of users by timeline
+ */
 public class RecordsActivity extends AppCompatActivity {
     public static final String EXTRA = "package com.example.tantan.healthchecker";
     @Override
