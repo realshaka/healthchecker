@@ -5,11 +5,16 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class RecordsActivity extends AppCompatActivity {
-
+    public static final String EXTRA = "package com.example.tantan.healthchecker";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +48,21 @@ public class RecordsActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        ListView lv = findViewById(R.id.recordListView);
+        lv.setAdapter(new ArrayAdapter<Record>(this, android.R.layout.simple_list_item_1, GlobalModel.getInstance().getRecords()));
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.d("onRecordClick", "onItemClick" + i + ")");
+                Intent nextActivity = new Intent(RecordsActivity.this, ShowRecordDetails.class);
+                nextActivity.putExtra(EXTRA, i);
+                startActivity(nextActivity);
+            }
+        });
     }
+
+
 
 
 }

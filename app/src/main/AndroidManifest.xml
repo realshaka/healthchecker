@@ -24,7 +24,14 @@
                 android:value=".MainActivity" />
         </activity>
         <activity android:name=".RecordsActivity" />
-        <activity android:name=".GraphActivity"></activity>
+        <activity android:name=".GraphActivity" />
+        <activity
+            android:name=".ShowRecordDetails"
+            android:parentActivityName=".RecordsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RecordsActivity" />
+        </activity>
     </application>
 
 </manifest>
