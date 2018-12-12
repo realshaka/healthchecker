@@ -20,7 +20,6 @@ public class GlobalModel {
 
     private GlobalModel() {
         records = new ArrayList<Record>();
-
     }
 
     /**
@@ -48,6 +47,9 @@ public class GlobalModel {
     public void addRecord(Record record) {
         records.add(record);
     }
+
+
+
 
 
 

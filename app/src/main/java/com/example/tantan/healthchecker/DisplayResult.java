@@ -1,5 +1,6 @@
 package com.example.tantan.healthchecker;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -8,6 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
+import java.io.FileOutputStream;
 import java.util.Date;
 
 /**
@@ -73,6 +77,7 @@ public class DisplayResult extends AppCompatActivity {
             textView.setText(message);
         }
         updateRecord();
+        Log.d("printDate", String.valueOf(AppUtils.getCurrentDateTime()));
     }
 
     /**
@@ -82,6 +87,18 @@ public class DisplayResult extends AppCompatActivity {
     public void saveRecord(View view) {
         GlobalModel.getInstance().addRecord(this.record);
         Log.d("check123456", String.valueOf(record));
+        Gson gson =  new Gson();
+        String json = gson.toJson(GlobalModel.getInstance().getRecords());
+        FileOutputStream outputStream;
+
+        try {
+            outputStream = openFileOutput("healthchecker.txt", Context.MODE_PRIVATE);
+            outputStream.write(json.getBytes());
+            outputStream.close();
+            Log.d("savefile", "savefile");
+        } catch (Exception e) {
+            Log.d("savefileError", "cannot savefile");
+        }
         finish();
     }
 
